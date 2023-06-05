@@ -4,56 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table HTML</title>
-    <!-- etiqueta de estilos: como importamos ESTILOS para nuestra tabla? -->
+    <title>Form HTML</title>
+    <!-- etiqueta de estilos: como importamos ESTILOS para nuestro formulario? -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
+        <!-- Creacion de Formulario -->
+        <!--! Cuando creamos un formulario, UBICAR TODAS LAS ETIQUETAS DE INPUT DENTRO DEL FORM -->
+        <div>
+            <h3>Formulario de registro</h3>
+            <form method="post" >
+                <label for="nombre">Nombre</label>
+                <input type="text" class="inputStyles">
 
-<!-- 
-TABLAS EN HTML -->
+                <label for="apellido">Apellido</label>
+                <input type="text" class="inputStyles">
 
-<!-- la etiqueta "table" me indica que todo el contenido, sra en formato de tabla -->
-<div class="divTabla">
-    <table id="tablaContenido">
-        <thead>
-            <th width="15%">Nombre</th>
-            <th width="15%">Apellido</th>
-            <th width="20%">Domicilio</th>
-            <th width="20%">Telefono</th>
-            <th width="30%">Avatar</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Luis</td>
-                <td>Sanchez</td>
-                <td>Av Siempreviva 742</td>
-                <td>1553693698</td>
-                <td> <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/XXFNUZIZVVEG7K6X6KA5OLD4OE.jpg" alt="" srcset=""></td>
-            </tr>
-            <tr>
-                <td>Miguel</td>
-                <td>Vela</td>
-                <td>Cayuncho 852</td>
-                <td>2256398741</td>
-                <td><img src="https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg" alt=""></td>
-            </tr>
-            <tr>            
-                <td>Mario</td>
-                <td>Bros</td>
-                <td>Av Honguitos 452</td>
-                <td>123456789</td>
-                <td><img src="https://pbs.twimg.com/media/EhulGMdVoAIgBeN.png" alt=""></td>
-            </tr>
-            <tr>            
-                <td>Luigi</td>
-                <td>Bros</td>
-                <td>Av Honguitos 452</td>
-                <td>123654987</td>
-                <td><img src="https://cdn.shopify.com/s/files/1/0337/2993/7548/collections/luigi_1024x.png?v=1603983667" alt=""></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+                <label for="domicilio">Domicilio</label>
+                <input type="text" class="inputStyles">
+
+                <label for="Telefono">Telefono Celular</label>
+                <input type="text" class="inputStyles" placeholder="Cod de area, sin 0, sin 15" >
+
+                <label for="genero">Genero</label>
+                <select name="" id="">
+                    <option value="" selected>**Seleccione un Genero**</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="O">Otros</option>
+                </select>
+                
+                <input type="submit" value="Enviar" class="inputSubmit"> <!-- es muy importante ponerle el tipo como SUBMIT, para que se envie ese formulario -->
+                <button type="reset" class="btnReset">Cancelar</button> <!-- el type "reset" , vuelve el formulario a 0 -->
+            </form>
+                
+        </div>
+       
+        
+
+    </body>
+    </html>
+    
 </body>
 </html>
