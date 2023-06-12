@@ -1,58 +1,24 @@
-body {
+#grid{
+    /* vamos a decirle a ese contenedor que su contenido va a ser una grilla */
+    display: grid;
+    /* Armado de plantilla de columnas y filas */
+    /* grid-template-columns: repeat(5,1fr) ; /* 1fr: significa que  */
+    /*ocupa TODO EL ESPACIO LIBRE que tenga*/
 
-    background-color: rgb(209, 208, 208);
-    font-family:Verdana, Geneva, Tahoma, sans-serif  /* nos permite dar diferentes tipos de letras (fuentes)*/
+    /** ejemplo de grip-template-column pero en porcentaje*/
+    grid-template-columns: 20% 20% 1fr 15% 15%;
+    grid-template-rows: 1fr;
+    /* grid-gap: es la separacion entre cada elemento de la grilla */
+    grid-gap: 2vw;
+    background-color: brown;
 }
 
-form {
-    max-width: 300px ;
-    margin: 0px; /* separo entre elementos*/
-}
-
-label{
-    display: block;
-    margin-top: 8px;
-}
-
-/* vamos a darle estilos a mi input a traves de su class*/
-
-.inputStyles{
-    border: 1px solid blue;
-    border-radius: 4px;
-    width: 75%;
-    padding: 5px;
-}
-
-select {
-    appearance: none;
-    display: block;
-    border-radius: 4px;
-    width: 75%;
-    padding: 5px;
-    border: 1px solid blue;
-    margin-bottom: 5px;
-}
-
-.inputSubmit{
-    background-color: rgb(52, 129, 253);
+.grid-div{
+    font-size: 5vw ;
+    background-color: blue;
     color: white;
-    border-radius: 3px;
-    padding: 5px 15px;
-    margin: 5px 15px 0px 15px;
-    border: 1px solid rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-.btnReset{
-    background-color: red;
-    color: white;
-    border-radius: 3px;
-    padding: 5px 15px;
     border: 1px solid black;
-    cursor: pointer;
-}
-
-.inputSubmit:hover{ /* cuando nos posicionamos sobre un elemento, se aplican estas caracteristicas*/
-    background-color: white;
-    color: rgb(52, 129, 253);
+    padding: .5em;
+    text-align: center;
+    margin: 5px;
 }
