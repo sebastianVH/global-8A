@@ -1,0 +1,47 @@
+.grid-template{
+    background-color: rgb(202, 255, 255);
+    display: grid;
+    /* cada linea de template representa UNA FILA*/
+    grid-template-areas:
+    "header header header header"
+    "nav sectionA sectionB aside"
+    "footer footer footer footer"
+    ;
+    /* creamos el tamaño de las filas y columnas */
+    grid-template-rows: 20% 1fr 10%;
+    grid-template-columns: 20% 1fr 1fr 15% ;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0px;
+}
+/* cadena de elementos */
+header,nav,section,aside,footer {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+/* vamos a decirles a cada elemento QUE AREA DEBE OCUPAR */
+
+#pageHeader{
+    grid-area:header;
+}
+
+#pageNav{
+    grid-area: nav;
+}
+
+#pageSection {
+    grid-area: sectionA;
+}
+
+#pageSection2{
+    grid-area: sectionB;
+}
+
+#pageAside{
+    grid-area: aside;
+}
+
+#pageFooter{
+    grid-area: footer;
+}
