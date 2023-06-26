@@ -1,0 +1,76 @@
+body { /* voy a darle propiedades a mi body*/
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+    grid-template-rows:20% 1fr 5%;
+    grid-template-columns: 1fr 1fr ;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+}
+
+.divHeader{
+    grid-area: header;
+    background-color: rgba(0, 255, 255, 0.811);
+}
+
+.divMain{
+    grid-area: main;
+}
+
+.divFooter{
+    grid-area: footer;
+}
+
+h1{
+    /* cambio de fuente*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.4em;
+}
+
+/* cadena - llamada por cola*/
+
+nav ul{
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+a{
+    /* le quitamos la decoracion de abajo a mis elementos de tipo link*/
+    text-decoration: none;
+}
+
+.divMain{
+    background-image: linear-gradient(to left,rgb(0, 255, 145),rgb(34, 97, 0));
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr)) ;
+    justify-items: center;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 161, 36);
+    margin: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.card img{
+    width: 280px;
+    /*solucion a imagens de diferentes tamaños*/
+    aspect-ratio: 16/9; /* aspecto de estirado*/
+    object-fit: contain;
+}
+
+.divFooter{
+    background-color: blueviolet;
+    color: white;
+}
