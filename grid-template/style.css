@@ -1,0 +1,77 @@
+/* .grid-template{
+    background-color: rgb(202, 255, 255);
+    display: grid;
+    /* cada linea de template representa UNA FILA*/
+    /* grid-template-areas:
+    "header header header header"
+    "nav nav nav nav"
+    "sectionA sectionB aside aside"
+    "footer footer footer footer"
+    ; */
+    /* creamos el tamaño de las filas y columnas */
+    /* grid-template-rows: 20% 5% 1fr 10%;
+    grid-template-columns: 1fr 1fr 10% 10% ;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0px;
+} */
+/* cadena de elementos */
+/* header,nav,section,aside,footer {
+    background-color: yellow;
+    border: 1px solid black;
+} */
+
+/* vamos a decirles a cada elemento QUE AREA DEBE OCUPAR */
+
+/* #pageHeader{
+
+    grid-area:header;
+}
+
+#pageNav{
+    grid-area: nav;
+}
+
+#pageSection {
+    grid-area: sectionA;
+}
+
+#pageSection2{
+    grid-area: sectionB;
+}
+
+#pageAside{
+    grid-area: aside;
+}
+
+#pageFooter{
+    grid-area: footer;
+}  */
+
+.grid{
+    display: grid;
+    grid-gap: 5px;
+    margin: 10px;
+}
+
+
+.auto-fit{
+    /* si ya no tengo elementos, no voy a seguir estirando el lugar, simplemente termino de colocar elementos, y dejo el espacio*/
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+
+
+
+.auto-fill{
+    /*FILL: si no tengo mas elementos COMPLETO CON LOS QUE TENGA DENTRO*/
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(20px,1fr));
+}
+
+.grid > div {
+    background-color: yellow;
+    font-size: 1.5em;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid black;
+}

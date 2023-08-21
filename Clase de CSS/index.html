@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de CSS</title>
+    <style>
+        /*seleccion a traves de ID: debo utilizar el #*/
+
+        #miContenedor2{
+            background-color: brown;
+        }
+    </style>
+    <!-- usamos la etiqueta link y en el href ponemos la ruta de CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CSS desde style -->
+    <div class="contenedor" id="miContenedor" style="background-color:blue">
+        Contenedor Estilo desde propiedad style
+    </div>
+
+    <!-- CSS desde la Cabecera del documento -->
+    <div class="contenedor2" id="miContenedor2">
+        Contenedor Estilo desde Cabecera
+    </div>
+
+    <!-- CSS desde un archivo externo -->
+    <div class="contenedor3" id="miContenedor3">
+        Contenedor con diseño desde hoja externa
+    </div>
+    <hr>
+    <h1> Elementos con multiples estilos</h1>
+    <div class="container">Div1</div>
+    <div class="container no-margin">Div2</div>
+    <div id="contenedor3" class="container no-padding letra-segoe">Div3</div>
+</body>
+</html>

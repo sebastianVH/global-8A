@@ -1,0 +1,118 @@
+/**Maneras de incluir el CSS 
+
+como lo incluimos:
+- Directamente sobre el elemento (etiqueta) usando la propiedad "style". Ahi, directamente, escribimos nuestro codigo CSS
+- En la cabecera de nuestro HTML. Usando una etiqueta llamada "style" podemos decir el diseño que tendra en la pagina, los elemento que indiquemos
+- En una hoja aparte (archivo). NO DEBEMOS OLVIDAR IMPORTAR LA HOJA AL HTML
+
+*/
+
+/**Seleccion de elementos
+
+- A traves del tag (etiqueta) por ej => div, a, img, h1, p
+- A traves de la class , por ej => class="contenedor" , class="texto-parrafo"
+- A traves del id , por ej => id="miContenedor" , id="elementoPrincipal"
+
+*/
+
+/* para seleccionar a traves de una clase, utilizamos el .*/
+
+/*? PARAMETROS Y VARIABLES GLOBALES. */
+
+/* UNA VARIABLE ES UNA "CAJA" DONDE GUARDEMOS ALGUN DATO*/
+
+:root{
+
+    --fuenteParrafo: 'Courier New', Courier, monospace;
+    --fuenteHeader: 'Times New Roman', Times, serif;
+    --negro: black;
+    --rojo: rgb(196, 0, 0);
+    --colorHeader: rgb(255, 159, 14);
+    --borde: 10px solid rgb(255, 0, 0);
+}
+
+/* Parametro global: son parametros que afectaran nuestro HTML y nuestro DOCUMENTO*/
+
+html{
+    box-sizing: border-box; /* propiedad "caja con bordes" */
+    font-size:62.5%; /* 1rem = 10px */
+}
+
+/* parametro GLOBAL DE ELEMENTOS*/
+
+*, *::before, *::after{
+    margin: 0 auto;
+    box-sizing: inherit;
+}
+
+
+/* utilidades de clases: son clases que nos permiten dar una propiedad, y que utilizaremos con frecuencia*/
+
+.no-margin{
+    margin: 0;
+    color: blue;
+}
+
+.no-padding{
+    padding: 0;
+    color: green;
+}
+
+.letra-segoe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.contenedor3 {
+    background-color: green;
+    /* para utilizar una variable, simplemente llamamos a la funcion var()*/
+    font-family: var(--fuenteParrafo)
+}
+
+.container{
+    background-color: var(--colorHeader);
+    /*agregar bordes*/
+    border: var(--borde);
+    /* centrar texto*/
+    text-align: center;
+    /* estilo de texto*/
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    /* tamaño del texto*/
+    font-size: 5rem;
+    /* color de texto*/
+    /* color: white; */
+    /* bordes al texto*/
+    -webkit-text-stroke: 0.5px var(--negro);
+    text-shadow: -2px 1px 0 var(--negro);
+
+    /*SEPARACIONES: 
+    podemos separar: el contenido del borde, y los elementos entre si
+    */
+
+    /* separar el contenido de sus bordes*/
+    /* padding: 5px 3px 10px 10px; */
+
+    /* para separar el contenido con respecto a los otros elementos*/
+    /* margin: 5px 15px 10px 5px;  arriba, derecha, abajo, izquierda*/
+
+    /* las separaciones, tienen sus propios atributos individuales 
+    margin-top: ;
+    margin-bottom: ;
+    padding-left: ;
+    padding-right: ;
+    */
+}
+
+/*HOVER: es un indicador, que nos dira que va a ocurrir con un elemento, cuando le pasemos el mouse por encima
+
+para poder usarlo, debemos llamar a la clase, y pasarle un selector, que es :hover
+*/
+
+/* cuando nos posicionemos sobre el div3 , cambiara el color del fondo y de la letra*/
+
+#contenedor3:hover{
+    background-color: aqua;
+    color: var(--rojo);
+    transform: rotate(90deg);
+    animation: backwards;
+}
